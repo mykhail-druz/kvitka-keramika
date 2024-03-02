@@ -4,19 +4,20 @@ import ContactForm from "@/components/ContactForm/ContactForm";
 import { ToastContainer } from "react-toastify";
 import Gallery from "@/components/Gallery/Gallery";
 import HeroBanner from "@/components/HeroBanner/HeroBanner";
-import React, { RefObject } from "react";
+import React from "react";
 import AboutUs from "@/components/AboutUs/AboutUs";
 import Courses from "@/components/Courses/Courses";
 
 const DynamicIframe = dynamic(() =>
   import("react").then((React) => {
-    return React.forwardRef<HTMLIFrameElement, React.IframeHTMLAttributes<HTMLIFrameElement>>(
+    const ForwardedIframe = React.forwardRef<HTMLIFrameElement, React.IframeHTMLAttributes<HTMLIFrameElement>>(
       (props, ref) => <iframe ref={ref} {...props} />
     );
+    ForwardedIframe.displayName = 'DynamicIframe'; // Setting displayName
+    return ForwardedIframe;
   }),
   { ssr: false }
 );
-
 
 export default function Home() {
   return (
