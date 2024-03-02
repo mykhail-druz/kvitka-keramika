@@ -1,12 +1,12 @@
 const Courses = () => {
   return (
-    <section className="flex flex-col bg-beige justify-center items-center py-16 space-y-32">
+    <section id="master-class" className="flex flex-col bg-beige justify-center items-center py-16 space-y-32">
       {/* 1 */}
       <div className="flex flex-col w-[90%] md:w-[90%] 2xl:w-2/3 mx-auto">
         <h2 className="mb-8 font-bold text-4xl text-brown">Гончарство</h2>
         <div className="flex-col md:grid lg:grid-cols-2 xl:grid-cols-3 md:gap-x-32 md:gap-y-16  space-y-16 md:space-y-0">
           <div className="flex flex-col space-y-4">
-            <p className="font-semibold text-2xl">Індивідуальне заняття</p>
+            <h3 className="font-semibold text-2xl">Індивідуальне заняття</h3>
 
             <p className="font-semibold text-xl">Тривалість: 2 – 2,5 години</p>
             <p className="font-semibold text-xl">
@@ -26,7 +26,7 @@ const Courses = () => {
             </p>
           </div>
           <div className="flex flex-col space-y-4">
-            <p className="font-semibold text-2xl">Заняття для двох </p>
+            <h3 className="font-semibold text-2xl">Заняття для двох </h3>
 
             <p className="font-semibold text-xl">Тривалість: 2 – 2,5 години</p>
             <p className="font-semibold text-xl">
@@ -49,7 +49,7 @@ const Courses = () => {
             </p>
           </div>{" "}
           <div className="flex flex-col space-y-4">
-            <p className="font-semibold text-2xl">Групове заняття</p>
+            <h3 className="font-semibold text-2xl">Групове заняття</h3>
 
             <p className="font-semibold text-xl">Тривалість: 1,5 - 2 години</p>
             <p className="font-semibold text-xl">
@@ -74,7 +74,7 @@ const Courses = () => {
             </p>
           </div>{" "}
           <div className="flex flex-col space-y-4">
-            <p className="font-semibold text-2xl">Виїзний майстер-клас</p>
+            <h3 className="font-semibold text-2xl">Виїзний майстер-клас</h3>
             <p className="text-lg text-brown">
               Виїзні майстер-класи з гончарства можуть стати чудовим заходом для
               різних подій, таких як дні народження, корпоративні заходи або
@@ -97,7 +97,7 @@ const Courses = () => {
         <h2 className="mb-8 font-bold text-4xl text-brown">Ліпка з глини</h2>
         <div className="flex-col md:grid lg:grid-cols-2 xl:grid-cols-3 md:gap-x-32 md:gap-y-16 space-y-16 md:space-y-0">
           <div className="flex flex-col space-y-4">
-            <p className="font-semibold text-2xl">Індивідуальне заняття</p>
+            <h3 className="font-semibold text-2xl">Індивідуальне заняття</h3>
 
             <p className="font-semibold text-xl">Тривалість: 1,5 – 2 години</p>
             <p className="font-semibold text-xl">
@@ -121,7 +121,7 @@ const Courses = () => {
             </p>
           </div>
           <div className="flex flex-col space-y-4">
-            <p className="font-semibold text-2xl">Заняття для двох </p>
+            <h3 className="font-semibold text-2xl">Заняття для двох </h3>
 
             <p className="font-semibold text-xl">Тривалість: 1,5 – 2 години</p>
             <p className="font-semibold text-xl">
@@ -146,7 +146,7 @@ const Courses = () => {
             </p>
           </div>{" "}
           <div className="flex flex-col space-y-4">
-            <p className="font-semibold text-2xl">Групове заняття</p>
+            <h3 className="font-semibold text-2xl">Групове заняття</h3>
 
             <p className="font-semibold text-xl">Тривалість: 1,5 - 2 години</p>
             <p className="font-semibold text-xl">
@@ -180,7 +180,7 @@ const Courses = () => {
         <h2 className="mb-8 font-bold text-4xl text-brown">Скульптура</h2>
         <div className="flex-col md:grid lg:grid-cols-2 xl:grid-cols-3 md:gap-x-32 md:gap-y-16 space-y-16 md:space-y-0">
           <div className="flex flex-col space-y-4">
-            <p className="font-semibold text-2xl">Індивідуальне заняття</p>
+            <h3 className="font-semibold text-2xl">Індивідуальне заняття</h3>
 
             <p className="font-semibold text-xl">Тривалість: 2,5 – 3 години</p>
             <p className="font-semibold text-xl">
@@ -205,7 +205,7 @@ const Courses = () => {
             </p>
           </div>
           <div className="flex flex-col space-y-4">
-            <p className="font-semibold text-2xl">Заняття для двох </p>
+            <h3 className="font-semibold text-2xl">Заняття для двох </h3>
 
             <p className="font-semibold text-xl">Тривалість: 2,5 – 3 години</p>
             <p className="font-semibold text-xl">
@@ -225,7 +225,7 @@ const Courses = () => {
             </p>
           </div>{" "}
           <div className="flex flex-col space-y-4">
-            <p className="font-semibold text-2xl">Групове заняття</p>
+            <h3 className="font-semibold text-2xl">Групове заняття</h3>
 
             <p className="font-semibold text-xl">Тривалість: 3- 3,5 години</p>
             <p className="font-semibold text-xl">
@@ -247,9 +247,9 @@ const Courses = () => {
             </p>
           </div>{" "}
           <div className="flex flex-col space-y-4">
-            <p className="font-semibold text-2xl">
+            <h3 className="font-semibold text-2xl">
               Випал виробів та глазурування
-            </p>
+            </h3>
             <p className="text-lg text-brown">
               У нашій гончарній майстерні термічна обробка глини перетворює
               звичайні вироби в унікальні керамічні шедеври! Печі, нагріті до
@@ -262,7 +262,7 @@ const Courses = () => {
             </p>
           </div>{" "}
           <div className="flex flex-col space-y-4">
-            <p className="font-semibold text-2xl">Подарунковий сертифікат</p>
+            <h3 className="font-semibold text-2xl">Подарунковий сертифікат</h3>
             <p className="text-lg text-brown">
               Що може бути кращим подарунком, ніж можливість відкрити для себе
               нові таланти та власні можливості? Сертифікат на майстер-клас з
@@ -277,11 +277,11 @@ const Courses = () => {
         </div>
       </div>
       {/* 4 */}
-      <div className="flex flex-col w-[90%] md:w-[90%] 2xl:w-2/3 mx-auto">
+      <div id="courses" className="flex flex-col w-[90%] md:w-[90%] 2xl:w-2/3 mx-auto">
         <h2 className="mb-8 font-bold text-4xl text-brown">Курси</h2>
         <div className="flex-col md:space-y-0">
           <div className="flex flex-col space-y-4">
-            <p className="font-semibold text-2xl">Курс «з 0 до Майстра»</p>
+            <h3 className="font-semibold text-2xl">Курс «з 0 до Майстра»</h3>
 
             <p className="font-semibold text-xl">
               Тривалість: 10 занять (кількість днів на тиждень обговорюється
