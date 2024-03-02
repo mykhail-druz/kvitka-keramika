@@ -6,6 +6,7 @@ import Gallery from "@/components/Gallery/Gallery";
 import HeroBanner from "@/components/HeroBanner/HeroBanner";
 import React, { RefObject } from "react";
 import AboutUs from "@/components/AboutUs/AboutUs";
+import Courses from "@/components/Courses/Courses";
 
 const DynamicIframe = dynamic(() =>
   import("react").then((React) => {
@@ -34,6 +35,7 @@ export default function Home() {
       />
       <HeroBanner/>
       <AboutUs/>
+      <Courses/>
       <Gallery />
       <ContactForm />
       <div className="w-full md:w-[90%] mx-auto items-center justify-center flex pb-8">

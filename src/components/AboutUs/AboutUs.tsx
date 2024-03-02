@@ -40,7 +40,7 @@ const AboutUs = () => {
           </p>
           <div>
             <Link
-              className="text-clay text-xl font-bold hover:text-beige hover:bg-clay duration-300 border-clay border-2 py-2 px-4 rounded-full mt-8"
+              className="text-clay text-xl font-bold hover:text-white hover:bg-clay duration-300 border-clay border-2 py-2 px-4 rounded-full mt-8"
               href="#contact"
             >
               Записатися
