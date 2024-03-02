@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import MobileNavComponent from "../MobileNav/MobileNavComponent";
 import React, { useEffect, useState } from "react";
-import { HiOutlineX, HiMenuAlt4 } from "react-icons/hi";
+import { HiOutlineX, HiMenuAlt4} from "react-icons/hi";
 
 type HeaderProps = {};
 
@@ -40,13 +40,13 @@ const Header = ({}) => {
         <nav className="hidden md:flex items-center justify-center space-x-8">
           <Link
             className="text-brown text-xl font-bold hover:text-white duration-300"
-            href="#lessons"
+            href="#master-class"
           >
             Майстер-класи
           </Link>
           <Link
             className="text-brown text-lg font-bold hover:text-white duration-300"
-            href="#lessons"
+            href="#courses"
           >
             Курси
           </Link>
