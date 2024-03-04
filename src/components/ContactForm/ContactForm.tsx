@@ -80,7 +80,7 @@ const ContactForm = ({}) => {
       <div className="w-[50%] relative hidden md:block">
         <Image
           className="mx-auto bg-cover"
-          src="/contact_banner.jpg"
+          src="/contact_banner.webp"
           alt="Contact us image"
           layout="fill"
           objectFit="cover"

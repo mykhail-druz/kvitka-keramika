@@ -36,7 +36,7 @@ const Gallery = ({}) => {
             <motion.div key={index}>
               <motion.div custom={index * 1} variants={itemVariants}>
                 <Image
-                  src={`/gallery/gallery_${index}.jpg`}
+                  src={`/gallery/gallery_${index}.webp`}
                   alt={`gallery photo ${index}`}
                   width={350}
                   height={450}
@@ -55,7 +55,7 @@ const Gallery = ({}) => {
           {[1, 11, 3, 12, 2, 7, 4, 10, 6, 8, 5, 9].map((index) => (
             <div key={index} style={{ margin: "0 8px" }}>
               <Image
-                src={`/gallery/gallery_${index}.jpg`}
+                src={`/gallery/gallery_${index}.webp`}
                 alt={`gallery photo ${index}`}
                 layout="fixed"
                 width={300}
