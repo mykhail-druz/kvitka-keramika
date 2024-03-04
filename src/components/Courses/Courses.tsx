@@ -1,11 +1,51 @@
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
 const Courses = () => {
+  const { ref, inView } = useInView({
+    threshold: 0.1,
+    triggerOnce: true,
+  });
+
+  const itemVariants = {
+    hidden: { y: -20, opacity: 0 },
+    visible: (custom: number) => ({
+      y: 0,
+      opacity: 1,
+      transition: { delay: custom * 0.1 },
+    }),
+  };
+
   return (
-    <section id="master-class" className="flex flex-col bg-beige justify-center items-center py-16 space-y-32">
+    <motion.section
+      ref={ref}
+      initial="hidden"
+      animate={inView ? "visible" : "hidden"}
+      variants={itemVariants}
+      id="master-class"
+      className="flex flex-col bg-beige justify-center items-center py-16 space-y-32"
+    >
       {/* 1 */}
-      <div className="flex flex-col w-[90%] md:w-[90%] 2xl:w-2/3 mx-auto">
-        <h2 className="mb-8 font-bold text-4xl text-brown">Гончарство</h2>
+      <motion.div
+        ref={ref}
+        initial="hidden"
+        animate={inView ? "visible" : "hidden"}
+        variants={itemVariants}
+        className="flex flex-col w-[90%] md:w-[90%] 2xl:w-2/3 mx-auto"
+      >
+        <motion.h2
+          custom={1}
+          variants={itemVariants}
+          className="mb-8 font-bold text-4xl text-brown"
+        >
+          Гончарство
+        </motion.h2>
         <div className="flex-col md:grid lg:grid-cols-2 xl:grid-cols-3 md:gap-x-32 md:gap-y-16  space-y-16 md:space-y-0">
-          <div className="flex flex-col space-y-4">
+          <motion.div
+            custom={2}
+            variants={itemVariants}
+            className="flex flex-col space-y-4"
+          >
             <h3 className="font-semibold text-2xl">Індивідуальне заняття</h3>
 
             <p className="font-semibold text-xl">Тривалість: 2 – 2,5 години</p>
@@ -24,8 +64,12 @@ const Courses = () => {
               Гончарство дозволяє розслабитися, зосередитися та розвинути творчі
               здібності, створюючи неповторні речі руками.
             </p>
-          </div>
-          <div className="flex flex-col space-y-4">
+          </motion.div>
+          <motion.div
+            custom={3}
+            variants={itemVariants}
+            className="flex flex-col space-y-4"
+          >
             <h3 className="font-semibold text-2xl">Заняття для двох </h3>
 
             <p className="font-semibold text-xl">Тривалість: 2 – 2,5 години</p>
@@ -47,8 +91,12 @@ const Courses = () => {
               Також можна створити один спільний проект в чотири руки, це дууже
               романтично!
             </p>
-          </div>{" "}
-          <div className="flex flex-col space-y-4">
+          </motion.div>{" "}
+          <motion.div
+            custom={3}
+            variants={itemVariants}
+            className="flex flex-col space-y-4"
+          >
             <h3 className="font-semibold text-2xl">Групове заняття</h3>
 
             <p className="font-semibold text-xl">Тривалість: 1,5 - 2 години</p>
@@ -65,15 +113,14 @@ const Courses = () => {
               або колегами, спробувати щось нове та розслабитися. Під
               керівництвом інструктора учасники навчаться гончарному мистецтву,
               обміняються досвідом і порадами, а кожен отримає унікальне глиняне
-              творіння. Приєднуйтеся самостійно або приводь свою компанією, та
-              отримайте 5% знижки для групових бронювань. Групові заняття
-              сприяють створенню теплої та творчої атмосфери, де ви можете
-              вільно виражати свою креативність та насолоджуватися спільними
-              досягненнями. Приходьте до нас та відкрийте для себе нові художні
-              можливості в дружній компанії!
+              творіння.
             </p>
-          </div>{" "}
-          <div className="flex flex-col space-y-4">
+          </motion.div>{" "}
+          <motion.div
+            custom={4}
+            variants={itemVariants}
+            className="flex flex-col space-y-4"
+          >
             <h3 className="font-semibold text-2xl">Виїзний майстер-клас</h3>
             <p className="text-lg text-brown">
               Виїзні майстер-класи з гончарства можуть стати чудовим заходом для
@@ -89,14 +136,24 @@ const Courses = () => {
               Для узгодження деталей залиш завку або зателефонуй.{" "}
               <span className="font-bold">(Проводимо у теплий період)</span>
             </p>
-          </div>
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
       {/* 2 */}
-      <div className="flex flex-col w-[90%] md:w-[90%] 2xl:w-2/3 mx-auto">
-        <h2 className="mb-8 font-bold text-4xl text-brown">Ліпка з глини</h2>
+      <motion.div className="flex flex-col w-[90%] md:w-[90%] 2xl:w-2/3 mx-auto">
+        <motion.h2
+          custom={5}
+          variants={itemVariants}
+          className="mb-8 font-bold text-4xl text-brown"
+        >
+          Ліпка з глини
+        </motion.h2>
         <div className="flex-col md:grid lg:grid-cols-2 xl:grid-cols-3 md:gap-x-32 md:gap-y-16 space-y-16 md:space-y-0">
-          <div className="flex flex-col space-y-4">
+          <motion.div
+            custom={6}
+            variants={itemVariants}
+            className="flex flex-col space-y-4"
+          >
             <h3 className="font-semibold text-2xl">Індивідуальне заняття</h3>
 
             <p className="font-semibold text-xl">Тривалість: 1,5 – 2 години</p>
@@ -119,8 +176,12 @@ const Courses = () => {
               захоплюючим заняттям для всіх, хто бажає виразити свою творчість
               та відчути радість від роботи з руками.
             </p>
-          </div>
-          <div className="flex flex-col space-y-4">
+          </motion.div>
+          <motion.div
+            custom={7}
+            variants={itemVariants}
+            className="flex flex-col space-y-4"
+          >
             <h3 className="font-semibold text-2xl">Заняття для двох </h3>
 
             <p className="font-semibold text-xl">Тривалість: 1,5 – 2 години</p>
@@ -144,8 +205,12 @@ const Courses = () => {
               Також можна спільно створити проект у чотири руки, що надає
               додатковий романтичний шар нашому спільному творчому процесу
             </p>
-          </div>{" "}
-          <div className="flex flex-col space-y-4">
+          </motion.div>{" "}
+          <motion.div
+            custom={8}
+            variants={itemVariants}
+            className="flex flex-col space-y-4"
+          >
             <h3 className="font-semibold text-2xl">Групове заняття</h3>
 
             <p className="font-semibold text-xl">Тривалість: 1,5 - 2 години</p>
@@ -164,21 +229,23 @@ const Courses = () => {
               вивчите основи роботи з глиною, дізнаєтесь секретні техніки, а
               також зможете реалізувати свої творчі задуми.
             </p>
-            <p className="text-lg text-brown">
-              Приєднуйтесь самостійно або приводь свою компанію, та отримайте 5%
-              знижки для групових бронювань. Групові заняття сприяють створенню
-              теплої та творчої атмосфери, де ви можете вільно виражати свою
-              креативність та насолоджуватися спільними досягненнями. Приходьте
-              до нас та відкрийте для себе нові художні можливості в дружній
-              компанії!
-            </p>
-          </div>{" "}
+          </motion.div>{" "}
         </div>
-      </div>
+      </motion.div>
       {/* 3 */}
       <div className="flex flex-col w-[90%] md:w-[90%] 2xl:w-2/3 mx-auto">
-        <h2 className="mb-8 font-bold text-4xl text-brown">Скульптура</h2>
-        <div className="flex-col md:grid lg:grid-cols-2 xl:grid-cols-3 md:gap-x-32 md:gap-y-16 space-y-16 md:space-y-0">
+        <motion.h2
+          custom={9}
+          variants={itemVariants}
+          className="mb-8 font-bold text-4xl text-brown"
+        >
+          Скульптура
+        </motion.h2>
+        <motion.div
+          custom={10}
+          variants={itemVariants}
+          className="flex-col md:grid lg:grid-cols-2 xl:grid-cols-3 md:gap-x-32 md:gap-y-16 space-y-16 md:space-y-0"
+        >
           <div className="flex flex-col space-y-4">
             <h3 className="font-semibold text-2xl">Індивідуальне заняття</h3>
 
@@ -204,7 +271,11 @@ const Courses = () => {
               Маштабні проекти за індивідуальним обрахунком
             </p>
           </div>
-          <div className="flex flex-col space-y-4">
+          <motion.div
+            custom={11}
+            variants={itemVariants}
+            className="flex flex-col space-y-4"
+          >
             <h3 className="font-semibold text-2xl">Заняття для двох </h3>
 
             <p className="font-semibold text-xl">Тривалість: 2,5 – 3 години</p>
@@ -223,8 +294,12 @@ const Courses = () => {
               скульптура дозволяє виразити творчість та сприяє задоволенню від
               роботи з матеріалами та формами.
             </p>
-          </div>{" "}
-          <div className="flex flex-col space-y-4">
+          </motion.div>{" "}
+          <motion.div
+            custom={12}
+            variants={itemVariants}
+            className="flex flex-col space-y-4"
+          >
             <h3 className="font-semibold text-2xl">Групове заняття</h3>
 
             <p className="font-semibold text-xl">Тривалість: 3- 3,5 години</p>
@@ -245,8 +320,12 @@ const Courses = () => {
               нові техніки скульптури, а й отримати задоволення від творчого
               спілкування з однодумцями.
             </p>
-          </div>{" "}
-          <div className="flex flex-col space-y-4">
+          </motion.div>{" "}
+          <motion.div
+            custom={13}
+            variants={itemVariants}
+            className="flex flex-col space-y-4"
+          >
             <h3 className="font-semibold text-2xl">
               Випал виробів та глазурування
             </h3>
@@ -260,8 +339,12 @@ const Courses = () => {
               гривень за утільний випал або 350 гривень за поливу. Приходьте до
               нас і відчуйте справжню магію створення кераміки!
             </p>
-          </div>{" "}
-          <div className="flex flex-col space-y-4">
+          </motion.div>{" "}
+          <motion.div
+            custom={14}
+            variants={itemVariants}
+            className="flex flex-col space-y-4"
+          >
             <h3 className="font-semibold text-2xl">Подарунковий сертифікат</h3>
             <p className="text-lg text-brown">
               Що може бути кращим подарунком, ніж можливість відкрити для себе
@@ -273,14 +356,27 @@ const Courses = () => {
               надихне на нові творчі звершення.{" "}
               <span className="font-bold">Термін дії - 3 місяці</span>
             </p>
-          </div>{" "}
-        </div>
+          </motion.div>{" "}
+        </motion.div>
       </div>
       {/* 4 */}
-      <div id="courses" className="flex flex-col w-[90%] md:w-[90%] 2xl:w-2/3 mx-auto">
-        <h2 className="mb-8 font-bold text-4xl text-brown">Курси</h2>
+      <div
+        id="courses"
+        className="flex flex-col w-[90%] md:w-[90%] 2xl:w-2/3 mx-auto"
+      >
+        <motion.h2
+          custom={15}
+          variants={itemVariants}
+          className="mb-8 font-bold text-4xl text-brown"
+        >
+          Курси
+        </motion.h2>
         <div className="flex-col md:space-y-0">
-          <div className="flex flex-col space-y-4">
+          <motion.div
+            custom={16}
+            variants={itemVariants}
+            className="flex flex-col space-y-4"
+          >
             <h3 className="font-semibold text-2xl">Курс «з 0 до Майстра»</h3>
 
             <p className="font-semibold text-xl">
@@ -293,20 +389,20 @@ const Courses = () => {
               (запис щодня з 11.00 до 20.00)
             </p>
             <p className="text-lg text-brown">
-              У нашому захоплюючому курсі &quot;з 0 до Майстра&quot; вас чекає 10
-              захопливих занять, які занурять вас у світ гончарства та ліпки. Ми
-              розпочнемо з основ, вивчаючи техніки гончарства та ліпки крок за
-              кроком. Половина курсу буде присвячена гончарству, де ви навчитеся
-              робити різноманітні посудини та інші вироби з глини за допомогою
-              гончарного колеса та інструментів. Решта занять буде присвячена
-              ліпці, де ви дізнаєтеся, як створювати унікальні скульптури та
-              інші художні вироби своїми руками.
+              У нашому захоплюючому курсі &quot;з 0 до Майстра&quot; вас чекає
+              10 захопливих занять, які занурять вас у світ гончарства та ліпки.
+              Ми розпочнемо з основ, вивчаючи техніки гончарства та ліпки крок
+              за кроком. Половина курсу буде присвячена гончарству, де ви
+              навчитеся робити різноманітні посудини та інші вироби з глини за
+              допомогою гончарного колеса та інструментів. Решта занять буде
+              присвячена ліпці, де ви дізнаєтеся, як створювати унікальні
+              скульптури та інші художні вироби своїми руками.
             </p>
             <p className="text-lg text-brown">
               На останньому занятті курсу ви матимете можливість виявити свою
               творчість та навички, створивши свій власний виріб з глини чи
-              скульптуру. Цей виріб залишиться вам як невід&apos;ємна пам&apos;ять про
-              ваші досягнення та творчий шлях.
+              скульптуру. Цей виріб залишиться вам як невід&apos;ємна
+              пам&apos;ять про ваші досягнення та творчий шлях.
             </p>
             <p className="text-lg text-brown">
               Після успішного завершення курсу ви отримаєте сертифікат про
@@ -315,10 +411,10 @@ const Courses = () => {
               вдосконалювати свої навички, працюючи у нашій студії та
               використовуючи всі наявні ресурси та обладнання.
             </p>
-          </div>
+          </motion.div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
