@@ -5,6 +5,8 @@ import Image from "next/image";
 import { useState } from "react";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const ContactForm = ({}) => {
   const [formData, setFormData] = useState({
@@ -52,8 +54,26 @@ const ContactForm = ({}) => {
     }
   };
 
+  const { ref, inView } = useInView({
+    threshold: 0.2,
+    triggerOnce: true,
+  });
+
+  const itemVariants = {
+    hidden: { y: -20, opacity: 0 },
+    visible: (custom: number) => ({
+      y: 0,
+      opacity: 1,
+      transition: { delay: custom * 0.1 },
+    }),
+  };
+
   return (
-    <section
+    <motion.section
+      ref={ref}
+      initial="hidden"
+      animate={inView ? "visible" : "hidden"}
+      variants={itemVariants}
       id="contact"
       className="w-full flex justify-between mx-auto my-8"
     >
@@ -67,10 +87,22 @@ const ContactForm = ({}) => {
         />
       </div>
       <div className="w-full md:w-[50%] bg-beige flex flex-col items-center py-16 space-y-8">
-        <h1 className="text-clay font-bold text-3xl">Записатися</h1>
-        <form onSubmit={handleSubmit} action="POST" className="w-[80%] md:w-[80%] lg:w-[70%] xl:w-[60%] 2xl:w-[50%] mx-auto">
+        <motion.h1
+          custom={1}
+          variants={itemVariants}
+          className="text-clay font-bold text-3xl"
+        >
+          Записатися
+        </motion.h1>
+        <form
+          onSubmit={handleSubmit}
+          action="POST"
+          className="w-[80%] md:w-[80%] lg:w-[70%] xl:w-[60%] 2xl:w-[50%] mx-auto"
+        >
           <div className="flex flex-col mx-auto space-y-8">
-            <input
+            <motion.input
+              custom={2}
+              variants={itemVariants}
               type="text"
               className="bg-white w-[90%] mx-auto px-4 py-3 rounded-full text-black outline-clay"
               placeholder="Ім'я..."
@@ -80,7 +112,9 @@ const ContactForm = ({}) => {
               onChange={handleChange}
               required
             />
-            <input
+            <motion.input
+              custom={3}
+              variants={itemVariants}
               type="phone"
               className="bg-white w-[90%] mx-auto px-4 py-3 rounded-full text-black outline-clay"
               placeholder="Телефон..."
@@ -90,7 +124,9 @@ const ContactForm = ({}) => {
               onChange={handleChange}
               required
             />
-            <input
+            <motion.input
+              custom={4}
+              variants={itemVariants}
               type="text"
               className="bg-white w-[90%] mx-auto px-4 py-3 rounded-full text-black outline-clay"
               placeholder="Email..."
@@ -100,7 +136,9 @@ const ContactForm = ({}) => {
               onChange={handleChange}
               required
             />
-            <select
+            <motion.select
+              custom={5}
+              variants={itemVariants}
               id="typeService"
               name="typeService"
               className="bg-white w-[90%] mx-auto px-2 py-3 rounded-full text-black outline-clay appearance-none"
@@ -148,8 +186,10 @@ const ContactForm = ({}) => {
               <option className="text-black" value="Групове заняття">
                 Групове заняття
               </option>
-            </select>
-            <textarea
+            </motion.select>
+            <motion.textarea
+              custom={6}
+              variants={itemVariants}
               className="w-[90%] mx-auto bg-white px-4 py-3 rounded-3xl text-black outline-clay resize-none"
               placeholder="Коментар..."
               id="message"
@@ -160,16 +200,18 @@ const ContactForm = ({}) => {
               onChange={handleChange}
               required
             />
-            <button
+            <motion.button
+              custom={7}
+              variants={itemVariants}
               type="submit"
               className="text-white text-lg font-bold hover:bg-white hover:text-brown bg-clay py-2 px-4 rounded-full duration-300 w-1/2 mx-auto"
             >
               <p>Наліслати</p>
-            </button>
+            </motion.button>
           </div>
         </form>
       </div>
-    </section>
+    </motion.section>
   );
 };
 export default ContactForm;
