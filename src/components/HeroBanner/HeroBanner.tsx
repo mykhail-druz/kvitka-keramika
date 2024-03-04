@@ -36,7 +36,7 @@ const HeroBanner = () => {
         </motion.div>
         <motion.div custom={9} variants={itemVariants} className="flex mt-8 md:mt-0 md:w-[50%]">
           <Image
-            src="/contact_banner.jpg"
+            src="/contact_banner.webp"
             alt="Hero banner"
             width={800}
             height={400}
