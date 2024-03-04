@@ -19,7 +19,6 @@ const Gallery = ({}) => {
       transition: { delay: custom * 0.1 },
     }),
   };
-
   return (
     <motion.section
       ref={ref}
