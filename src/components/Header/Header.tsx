@@ -29,6 +29,7 @@ const Header = ({}) => {
 
   return (
     <motion.header
+      id="up"
       initial="hidden"
       animate="visible"
       variants={itemVariants}
