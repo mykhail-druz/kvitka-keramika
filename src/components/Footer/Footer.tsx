@@ -36,7 +36,7 @@ const Footer = ({}) => {
         className="flex-col md:flex-row flex w-[90%] md:w-[80%] items-start md:items-center justify-between mt-2"
       >
         <Link href="/">
-          <Image src="/logo.png" width={150} height={150} alt="Logo" />
+          <img src="/logo.png" width={150} height={150} alt="Logo" />
         </Link>
         <div className="flex-col md:flex-row flex space-x-0 space-y-8 md:space-y-0 md:space-x-16 mr-0 md:mr-24 mb-12 md:mb-0 mt-4 md:mt-0">
           <motion.div
