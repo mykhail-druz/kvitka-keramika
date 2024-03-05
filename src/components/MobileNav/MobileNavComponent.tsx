@@ -8,7 +8,7 @@ const MobileNavCompopnent = () => {
           <li>
             <a
               className="hover:text-white duration-300 text-clay text-2xl"
-              href=""
+              href="#master-class"
             >
               Майстер-класи
             </a>
@@ -16,7 +16,7 @@ const MobileNavCompopnent = () => {
           <li>
             <a
               className="hover:text-white duration-300 text-clay text-2xl"
-              href=""
+              href="#courses"
             >
               Курси
             </a>

@@ -36,7 +36,7 @@ const Header = ({}) => {
       className="bg-beige w-full flex"
     >
       <div className="flex w-full md:w-[90%] mx-auto justify-center md:justify-between">
-        <div className="flex space-x-56 items-center justify-center">
+        <div className="flex w-full justify-between px-8">
           <motion.div custom={1} variants={itemVariants}>
             <Link href="/">
               <img src="/logo.png" width={130} height={130} alt="Logo" />
