@@ -100,7 +100,7 @@ const AboutUs = () => {
           variants={itemVariants}
           className="hidden md:block w-[50%]"
         >
-          <Image
+          <img
             className=""
             src="/about/about_1.jpg"
             alt="About us"
