@@ -38,7 +38,7 @@ const Header = ({}) => {
         <div className="flex space-x-56 items-center justify-center">
           <motion.div custom={1} variants={itemVariants}>
             <Link href="/">
-              <Image src="/logo.png" width={130} height={130} alt="Logo" />
+              <img src="/logo.png" width={130} height={130} alt="Logo" />
             </Link>
           </motion.div>
           <motion.button

@@ -78,14 +78,14 @@ const ContactForm = ({}) => {
       className="w-full flex justify-between mx-auto my-8"
     >
       <div className="w-[50%] relative hidden md:block">
-        <Image
+        <img
           className="mx-auto bg-cover"
           src="/contact_banner.webp"
           alt="Contact us image"
-          layout="fill"
-          objectFit="cover"
+          style={{ width: "100%", height: "100%", objectFit: "cover" }}
         />
       </div>
+
       <div className="w-full md:w-[50%] bg-beige flex flex-col items-center py-16 space-y-8">
         <motion.h1
           custom={1}
