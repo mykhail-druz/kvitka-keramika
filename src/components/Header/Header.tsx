@@ -1,6 +1,5 @@
 "use client";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import Link from "next/link";
 import MobileNavComponent from "../MobileNav/MobileNavComponent";
 import React, { useEffect, useState } from "react";
@@ -60,7 +59,7 @@ const Header = ({}) => {
         <nav className="hidden md:flex items-center justify-center space-x-8">
           <motion.div custom={3} variants={itemVariants}>
             <Link
-              className="text-brown text-xl font-bold hover:text-white duration-300"
+              className="text-brown text-xl font-bold hover:text-white duration-300 whitespace-nowrap"
               href="#master-class"
             >
               Майстер-класи
@@ -68,7 +67,7 @@ const Header = ({}) => {
           </motion.div>
           <motion.div custom={4} variants={itemVariants}>
             <Link
-              className="text-brown text-lg font-bold hover:text-white duration-300"
+              className="text-brown text-xl font-bold hover:text-white duration-300 whitespace-nowrap"
               href="#courses"
             >
               Курси
@@ -76,7 +75,7 @@ const Header = ({}) => {
           </motion.div>
           <motion.div custom={5} variants={itemVariants}>
             <Link
-              className="text-brown text-lg font-bold hover:text-white duration-300"
+              className="text-brown text-xl font-bold hover:text-white duration-300 whitespace-nowrap"
               href="#about"
             >
               Про нас
@@ -84,7 +83,7 @@ const Header = ({}) => {
           </motion.div>
           <motion.div custom={6} variants={itemVariants}>
             <Link
-              className="text-brown text-lg font-bold hover:text-white duration-300"
+              className="text-brown text-xl font-bold hover:text-white duration-300 whitespace-nowrap"
               href="#footer"
             >
               Контакти
