@@ -1,3 +1,4 @@
+"use client"
 import { IoIosArrowUp } from "react-icons/io";
 import React, { useState, useEffect } from "react";
 

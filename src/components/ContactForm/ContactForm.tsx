@@ -1,12 +1,12 @@
 "use client";
 
 import axios from "axios";
-import Image from "next/image";
 import { useState } from "react";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import nodemailer from "nodemailer";
 
 const ContactForm = ({}) => {
   const [formData, setFormData] = useState({
@@ -17,42 +17,43 @@ const ContactForm = ({}) => {
     typeService: "",
   });
 
-  const handleChange = (
-    event: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >
-  ) => {
+  const handleChange = (event: { target: { name: any; value: any } }) => {
     const { name, value } = event.target;
-    setFormData((formData) => ({
-      ...formData,
+    setFormData((prevFormData) => ({
+      ...prevFormData,
       [name]: value,
     }));
   };
 
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
+  // const handleSubmit = async (event: { preventDefault: () => void }) => {
+  //   event.preventDefault();
 
-    try {
-      const response = await axios.post("/api/contact", {
-        ...formData,
-      });
+  //   try {
+  //     const response = await fetch("https://formspree.io/f/mbjnkajk", {
+  //       mode: "no-cors",
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify(formData),
+  //     });
 
-      if (response.status >= 200 && response.status < 300) {
-        toast.success("Повідомлення відправлено!");
-        setFormData({
-          name: "",
-          phone: "",
-          email: "",
-          message: "",
-          typeService: "",
-        });
-      } else {
-        toast.error("Помилка відправлення!");
-      }
-    } catch (error) {
-      toast.error("Помилка з'єднання!");
-    }
-  };
+  //     if (response.ok) {
+  //       toast.success("Повідомлення відправлено!");
+  //       setFormData({
+  //         name: "",
+  //         phone: "",
+  //         email: "",
+  //         message: "",
+  //         typeService: "",
+  //       });
+  //     } else {
+  //       toast.error("Помилка відправлення!");
+  //     }
+  //   } catch (error) {
+  //     toast.error("Помилка з'єднання!");
+  //   }
+  // };
 
   const { ref, inView } = useInView({
     threshold: 0.2,
@@ -95,8 +96,9 @@ const ContactForm = ({}) => {
           Записатися
         </motion.h1>
         <form
-          onSubmit={handleSubmit}
-          action="POST"
+          action="https://formspree.io/f/mbjnkajk"
+          method="POST"
+          // onSubmit={handleSubmit}
           className="w-[80%] md:w-[80%] lg:w-[70%] xl:w-[60%] 2xl:w-[50%] mx-auto"
         >
           <div className="flex flex-col mx-auto space-y-8">

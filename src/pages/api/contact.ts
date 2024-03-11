@@ -20,7 +20,7 @@ export default async function handler(
       email,
       typeService,
       message,
-    } = //recaptchaToken
+    } =
       req.body as ContactFormData;
     const formData: ContactFormData = {
       name,
