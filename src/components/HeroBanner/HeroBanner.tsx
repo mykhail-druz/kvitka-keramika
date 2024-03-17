@@ -23,14 +23,14 @@ const HeroBanner = () => {
         <motion.div
           custom={8}
           variants={itemVariants}
-          className="flex flex-col items-start space-y-12 p-12 bg-beige md:w-[50%]"
+          className="flex flex-col items-start space-y-12 p-8 md:p-12 bg-beige md:w-[50%]"
         >
           <motion.p
             custom={10}
             variants={itemVariants}
             className="font-bold text-4xl text-brown"
           >
-            Керамічна студія &quot;Квітка&quot;
+            Студія кераміки &quot;Квітка&quot;
           </motion.p>
           <motion.p
             custom={11}

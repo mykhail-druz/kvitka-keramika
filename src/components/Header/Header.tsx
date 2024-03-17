@@ -32,10 +32,10 @@ const Header = ({}) => {
       initial="hidden"
       animate="visible"
       variants={itemVariants}
-      className="bg-beige w-full flex"
+      className={`${isActive ? "lg:top-0 shadow-2xl lg:h-[140px]" : "lg:h-[140px] "} bg-beige w-full flex transition-all z-10`}
     >
       <div className="flex w-full md:w-[90%] mx-auto justify-center md:justify-between">
-        <div className="flex w-full justify-between px-8">
+        <div className="flex items-center w-full justify-between px-4">
           <motion.div custom={1} variants={itemVariants}>
             <Link href="/">
               <img src="/logo.png" width={130} height={130} alt="Logo" />
