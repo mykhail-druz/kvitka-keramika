@@ -2,8 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background-image: url('/kvitka-2.png');
+  background-image: url("/kvitka-2.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

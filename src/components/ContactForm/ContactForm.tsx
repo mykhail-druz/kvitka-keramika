@@ -99,7 +99,7 @@ const ContactForm = ({}) => {
           action="https://formspree.io/f/mbjnkajk"
           method="POST"
           // onSubmit={handleSubmit}
-          className="w-[80%] md:w-[80%] lg:w-[70%] xl:w-[60%] 2xl:w-[50%] mx-auto"
+          className="w-[90%] md:w-[80%] lg:w-[70%] xl:w-[60%] 2xl:w-[50%] mx-auto"
         >
           <div className="flex flex-col mx-auto space-y-8">
             <motion.input

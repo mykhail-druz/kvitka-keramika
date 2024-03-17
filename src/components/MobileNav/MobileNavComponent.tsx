@@ -2,7 +2,7 @@ import React from "react";
 
 const MobileNavCompopnent = () => {
   return (
-    <div>
+    <div className="">
       <div className="bg-beige w-full h-full py-8">
         <ul className="h-full flex flex-col justify-center items-center gap-y-5 font-semibold">
           <li>

@@ -51,6 +51,12 @@ const Footer = ({}) => {
             >
               +380 97 926 69 28
             </a>
+            <a
+              href="tel:+380991369714"
+              className="font-medium underline underline-offset-8"
+            >
+              +380 99 136 97 14
+            </a>
           </motion.div>
           <motion.div
             custom={3}
