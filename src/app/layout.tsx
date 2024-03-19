@@ -32,6 +32,7 @@ export default function RootLayout({
     <html lang="uk">
       <head>
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico" />
+        <link rel="canonical" href="https://kvitka-keramika.kyiv.ua/" />
       </head>
       <body className={overpass.className}>
         <div className="blur-background">{children}</div>
